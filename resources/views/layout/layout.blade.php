@@ -1,11 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>itSimple | Blog</title>
+<title>My City</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="csrf-token" content="{{ csrf_token() }}">
 <link href="/css/style.css" rel="stylesheet" type="text/css" />
 <link href="/css/app.css" rel="stylesheet">
+   
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/coin-slider.css" />
+<link rel="stylesheet" type="text/css" href="/css/thumbnail-slider.css" />
+<link rel="stylesheet" type="text/css" href="/css/thumbs2.css" />
+<script type="text/javascript" src="/js/thumbnail-slider.js"></script>
 <script type="text/javascript" src="/js/cufon-yui.js"></script>
 <script type="text/javascript" src="/js/cufon-georgia.js"></script>
 <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
@@ -16,26 +22,76 @@
 <script type="text/javascript" src="/js/coin-slider.min.js"></script>
 </head>
 <body>
-<div class="main">
-  <div class="col-md-12 fixed_top_menu" style="background-color: #fff">
+  <?php
+$cartItem=Session::get('cart_item');
+$countCart=count($cartItem);
+
+  ?>
+<div class="main" style="   ">
+  <div class="col-md-12 " style="background-color: #fff; 
+    z-index: 9999;    min-height: 130px;">
     <div class="container">
      <div class="header">
-    <div class="header_resize">
-      <div class="menu_nav">
+       <div class="logo">
+        <h1 style="margin:0px;"><a href="/"><img src="/images/completelogo.jpeg"  style="margin-top: -50px; margin-left: -45px;height:130px;width: 221px;" width="75" height="75" alt="" class="gal" /></a></h1>
+      </div>      
+      <div class="col-md-9 RoundSocialIcon RoundIconResponsive" style="float: right;     width: 963px;      right: -104px;">
+          <div class="col-md-4" style="float: left">
+              <a target="_blank" href="">
+               <i class="fa fa-facebook icon imgsize "></i>
+            </a> 
+            <a target="_blank" href="">
+             <i class="fa fa-twitter  icon imgsize"></i>
+            </a>
+            <a target="_blank" href="">
+              <i class="fa fa-youtube  icon imgsize" aria-hidden="true"></i>
+
+            </a>
+            <a target="_blank" href="">
+             <i class="fa fa-instagram icon imgsize" aria-hidden="true"></i>
+
+               </a>
+               <a target="_blank" href="https://plus.google.com/u/0/+YouthHostelsAssociationofIndia">
+             <i class="fa fa-google-plus icon imgsize" aria-hidden="true"></i>
+
+               </a>
+               <a target="_blank" href="https://in.pinterest.com/yhaindia/">
+             <i class="fa fa-pinterest-p icon imgsize" aria-hidden="true"></i>
+
+               </a>
+          </div>
+          <div class="col-md-offset-1" style="float: left; ">
+            <p class="Address"> <img src="/images/flag.PNG"><span style="padding: 4px;">5, Nyaya Marg,</span><span style="padding: 4px;"> Chanakyapuri, New Delhi</span></p>
+            <p class="MobileStyle"><img src="/images/phone.PNG"><span style="padding: 4px;">011-29399022</span></p>
+          </div>
+         
+  <a href="/AddCartItem"><div class="col-md-1" style="float: right;color: #000"><i class="fa fa-shopping-cart" style="    font-size: 23px;
+    margin-top: 6px;"></i><span class="CartCount">{{$countCart}}</span></div>
+         </div>
+        </a>
+      <div class="header_resize">
+       <div class="menu_nav" >
         <ul>
-          <li class="active"><a href="/"><span>About</span></a></li>
-          <li><a href="/education"><span>Education</span></a></li>
-          <li><a href="/peelAway"><span>PeelAway</span></a></li>
-          <!-- <li><a href="/blog"><span>blogging</span></a></li> -->
-          <li><a href="/contact"><span>Contact Us</span></a></li>
+          <li class="active"><a href="/" ><span style="font-size: 18px; color: darkgoldenrod">Home</span></a></li>
+          <li class=""><a href="/about" ><span style="font-size: 18px;">About Us</span></a></li>
+           <li><a href="/unified"><span style="font-size: 18px;">Our Services</span></a></li>
+           <li class="dropdown">
+          <a href="#" >
+           <span class="dropbtn" style="font-size: 18px;"><input type="hidden" name="VisitorData" id="ProductVisitor" value=""> Our Products</span>
+            <div class="dropdown-content">
+              <a href="/peelAway" id="PeelAway" style="padding: 15px;">
+                Product List</a>
+              <a href="/ProductOverview" style="padding: 15px;">Product Description</a>
+            </div>
+          </a>
+          </li>
+          <!--  <li><a href="/peelAway"><span style="font-size: 18px;">Our Products</span></a></li> -->
+          <li><a href="/contact"><span style="font-size: 18px;">Contact Us</span></a></li>
         </ul>
       </div>
-      <div class="logo">
-        <h1><a href="/"><img src="images/logoGreyBlack (3).jpg"  style="margin-top: -50px;
-    margin-left: -45px;
-    width: 270px;" width="75" height="75" alt="" class="gal" /></a></h1>
-      </div>
+
       <div class="clr"></div>
+
       <div class="clr"></div>
     </div>
   </div>
@@ -43,55 +99,24 @@
   </div>
   
   <div class="content">
-    <div class="content_resize">
+    <div class="content_resize" style="padding-bottom: 0px;min-height: 605px;">
         @yield('content')
     </div>
   </div>
 </div>
- <div class="fbg">
-    <div class="container">
-       <div class="fbg_resize">
-      <div class="col c1">
-        <h2><span>Image</span> Gallery</h2>
-        <a href="#"><img src="images/gal1.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal2.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal3.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal4.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal5.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal6.jpg" width="75" height="75" alt="" class="gal" /></a> </div>
-      <div class="col c3">
-        <h2><span>Services</span> Overview</h2>
-        <p>Curabitur sed urna id nunc pulvinar semper. Nunc sit amet tortor sit amet lacus sagittis posuere cursus vitae nunc.Etiam venenatis, turpis at eleifend porta, nisl nulla bibendum justo.</p>
-        <ul class="fbg_ul">
-          <li><a href="#">Lorem ipsum dolor labore et dolore.</a></li>
-          <li><a href="#">Excepteur officia deserunt.</a></li>
-          <li><a href="#">Integer tellus ipsum tempor sed.</a></li>
-        </ul>
-      </div>
-     <!--  <div class="col c3">
-        <h2><span>Contact</span> Us</h2>
-        <p>Nullam quam lorem, tristique non vestibulum nec, consectetur in risus. Aliquam a quam vel leo gravida gravida eu porttitor dui.</p>
-        <p class="contact_info"> <span>Address:</span> 1458 TemplateAccess, USA<br />
-          <span>Telephone:</span> +123-1234-5678<br />
-          <span>FAX:</span> +458-4578<br />
-          <span>Others:</span> +301 - 0125 - 01258<br />
-          <span>E-mail:</span> <a href="#">mail@yoursitename.com</a> </p>
-      </div> -->
-      <div class="col c3">
-        <h2><span>Contact</span> Us</h2>
-        <p>If you have any querry , Kindly go to the <a href="/contact">contact Page</a></p>
-        <p class="contact_info"><span>Address:</span> Upper Ground Floor, Plot No 10, Opposite Payal Apartment, Lane No-6, Block-K, Mahipalpur, South West Delhi, Delhi, 110037 <br />
-          <span>Telephone:</span>+91-80-9010-7155<br />
-          <span>Mobile:</span>+91-80-9010-7155<br />
-          <span>E-mail:</span> <a href="#">shaswatsingh@mycityexim.com</a> </p>
-      </div>
-      <div class="clr"></div>
-    </div>
-    </div>
-   
-  </div>
- <div class="footer">
+ <div class="footer" style="clear: both;">
     <div class="footer_resize">
-      <p class="lf">&copy; Copyright <a href="#">MyCity Ex-Im</a>.</p>
-      <p class="rf">Design & Maintained By Praveen Thakur</p>
+      <p class="lf" style="margin: 10px 0 !important; padding: 12px;"><a href="#">Copyright © 2018. All Right Reserved to MyCity Ex-Im</a>.</p>
+      <a href="http://www.ingencorp.in/">
+         <p class="rf" style="margin: 10px 0 !important;padding: 12px;">Design & Maintained 
+        <img src="/images/ingenCorplogo.png" style="width: 140px;"></p>
       <div style="clear:both;"></div>
+      </a>
+     
     </div>
   </div>
 </div>
+
 </body>
+
 </html>

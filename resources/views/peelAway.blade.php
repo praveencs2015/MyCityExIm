@@ -1,13 +1,113 @@
 @extends('layout.layout') 
 @section('title', 'Home') 
 @section('content')
-<div class="slider">
-        <div id="coin-slider"> <a href="#"><img src="images/dispose.jpg" width="1100" height="360" alt="" /> </a> <a href="#"><img src="images/Corner_Peel_Away.jpg" width="1100" height="360" alt="" /> </a> <a href="#"><img src="images/Peeling_Process_3.jpg" width="1100" height="360" alt="" /> </a> </div>
+<!-- <div class="slider">
+        <div id="coin-slider"> <a href="#"><img src="images/p1.JPG"  alt="" /> </a> <a href="#"><img src="images/Corner_Peel_Away.jpg" width="1100" height="360" alt="" /> </a> <a href="#"><img src="images/Peeling_Process_3.jpg" width="1100" height="360" alt="" /> </a> </div>
         <div class="clr"></div>
-      </div>
+      </div> -->
       <div class="container">
         <div class="mainbar">
-        <div class="article">
+    <div class="col-md-12 " style=" width: 100%;padding: 0px;margin-top: 115px;">
+    <video autoplay muted loop id="myVideo" style=" width: 100%;">
+      <source src="/images/videos.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    </div>
+      
+          <div class=" customArticleCss" id="ProductHeight" >
+          <h2 style="padding-left: 2%; height: auto;"><span>Our</span> Product</h2>
+           <p>
+          <div class="clr"></div>
+          <div class="col-md-3 ProductAlign">
+            <div>
+            <a href="/productDetails/1"><img src="images/cribapeelproduct.png" style="width: 190px; "></a>  
+            </div>
+             <h3>Crib-A-Peel</h3>
+            <span>Unbelievably Soft and Waterproof</span>
+           <!--  <span>$16.49-$21.99</span> -->
+          </div>
+           <div class="col-md-3 ProductAlign">
+            <div>
+              <a href="/productDetails/2"><img src="images/dormapeelproduct.png"  style="width: 190px; "></a>
+            </div>
+            <h3>Dorm-A-Peel</h3>
+            <span>Unbelievably Soft and Waterproof</span>
+            <!-- <span>$16.49-$21.99</span> -->
+          </div>
+            <div class="col-md-3 ProductAlign">
+            <div>
+           <a href="/productDetails/3"> <img src="images/campapeelproduct.png"  style="width: 190px; "> </a> 
+            </div>
+             <h3>Camp-A-Peel</h3>
+            <span>Unbelievably Soft and Waterproof</span>
+           <!--  <span>$16.49-$21.99</span>   -->          
+          </div> 
+           <div class="col-md-3 ProductAlign">
+            <div>
+             <a href="/productDetails/4"> <img src="images/peelawaysproduct.png"  style="width: 190px; "></a>
+            </div>
+             <h3>Peelaways</h3>
+            <span>Unbelievably Soft and Waterproof</span>
+           <!--  <span>$16.49-$21.99</span> -->
+
+          </div> 
+          </p>
+          </div>
+       <div class="article customArticleCss " id="ProductObjective" style="height: 233px;">
+        <h2 style="padding-left: 2%;"><span>Product Objective</span></h2>
+        <p>
+          <div class="clr"></div>
+          <div style="padding-left: 3%;">
+             <span> The Project objective is to provide  a solution to reduce or eliminate the menace of contact diseases from hospitals.</span>
+             </br> 
+             <span>
+Our strategy is to capitalize on the awareness efforts of the government on Ebola and Lassa fever and urge the patients to request for new bed sheets any time they are admitted in the hospital. </span></br>
+<span>
+We also intend to partner with the ministry of health and see how to encourage hospitals across the country to embrace the use of disposable bed sheets which are now affordable at cheaper prices.
+</span>
+          </div>  
+        </p>
+      </div>
+
+        
+      <div class="article customArticleCss" id="ProductObjective" style="background-color: darkgray;height:416px;">
+      
+           <h2 class="" style="padding-left: 2%;"><span>How To Use</span></h2>
+             <p>
+          <div class="clr"></div>
+          <div class="col-md-4 productSheet" style="    padding: 12px;">
+            <a href="#"><img src="images/Peeling_Process_1.jpg" style="    border-radius: 127px;width: 264px;"></a></br>
+              <span>1. Place Peelaways with color stitching at head of mattress.</span>
+          </div>
+           <div class="col-md-4 productSheet" style="    padding: 12px;">
+            <a href="#"><img src="images/Peeling_Process_3.jpg" style="    border-radius: 127px;width: 264px;"></a></br>
+              <span>2. Peel down from top corner and along the seams after 7-10 days or if soiled.</span>
+      </div>
+           <div class="col-md-4 productSheet" style="    padding: 12px;">
+            <a href="#"><img src="images/dispose.jpg" style="    border-radius: 127px;width: 264px;"></a></br>
+              <span>3. Dispose of used layer responsibly and enjoy your new fresh sheet!</span>
+          </div>
+          
+    </p>
+
+    </div>
+     <div class="article customArticleCss " id="ProductCertification" style="height: 233px;">
+        <h2 style="padding-left: 2%;"><span>Product Certification</span></h2>
+        <p>
+          <div class="clr"></div>
+          <div style="padding-left: 3%;margin-left: 22px;">
+            <ul class="b">
+              <li>Meets all STC Standards.</li>
+              <li>Lead ,Phthalate,Formaldehyde Free.</li>
+                <li>Meets US federal Flammability Standards</li>
+                <li>ISO 9001</li>
+                <li>OEKO-TEX® 100 certified</li>
+            </ul>
+          </div>  
+        </p>
+      </div>
+      <div class="clr"></div>
+              <div class="article customArticleCss" style="height:312px; margin-top: 115px !important;">
           <h2 style="padding-left: 2%;"><span>About The Product</span></h2>
           <div class="clr"></div>
           <div style="padding: 3%;">
@@ -17,86 +117,23 @@
           </div>
           
         </div>
-        <div class="article">
-          <h2><span>Our</span> Product</h2>
-           <p>
-          <div class="clr"></div>
-          <div class="col-md-3">
-            <div>
-            <a href=""><img src="images/cribapeelproduct.png" style="width: 190px; "></a>  
-            </div>
-             <h3>Crib-A-Peel</h3>
-            <span>Unbelievably Soft and Waterproof</span>
-            <span>$16.49-$21.99</span>
-          </div>
-           <div class="col-md-3">
-            <div>
-              <img src="images/dormapeelproduct.png"  style="width: 190px; ">
-            </div>
-            <h3>Dorm-A-Peel</h3>
-            <span>Unbelievably Soft and Waterproof</span>
-            <span>$16.49-$21.99</span>
-          </div>
-           <div class="col-md-3">
-            <div>
-              <img src="images/peelawaysproduct.png"  style="width: 190px; ">
-            </div>
-             <h3>Peelaways</h3>
-            <span>Unbelievably Soft and Waterproof</span>
-            <span>$16.49-$21.99</span>
-
-          </div>
-           <div class="col-md-3">
-            <div>
-            <img src="images/peelawaysproduct.png"  style="width: 190px; ">  
-            </div>
-             <h3>Peelaways</h3>
-            <span>Unbelievably Soft and Waterproof</span>
-            <span>$16.49-$21.99</span>            
-          </div>  
-          </p>
-          
-        </div>
-      </div>
-      <div class="sidebar">
-        <div class="searchform">
-          <form id="formsearch" name="formsearch" method="post" action="#">
-            <span>
-            <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" value="Search our ste:" type="text" />
-            </span>
-            <input name="button_search" src="images/search.gif" class="button_search" type="image" />
-          </form>
-        </div>
-        <div class="gadget">
-          <h2 class="star"><span>How To Use</span></h2>
-          <div class="clr"></div>
-          <ul class="sb_menu">
-            <li><a href="#"><img src="images/Peeling_Process_1.jpg" style="width: 217px;"></a>
-              <span>Place Peelaways with color stitching at head of mattress.</span></li>
-            <li><a href="#"><img src="images/Corner_Peel_Away.jpg" style="width: 217px;"></a>
-              <span>Peel down from top corner and along the seams after 7-10 days or if soiled.</span></li>
-            <li><a href="#"><img src="images/Peeling_Process_3.jpg" style="width: 217px;"></a>
-              <span>Dispose of used layer responsibly and enjoy your new fresh sheet!</span></li>
-          </ul>
-        </div>
-       
-      </div>
-      <div class="article" >
-          <div class="col-md-12" style="background-color: #fff">
+    
+        <div class="article customArticleCss" style="height: 665px;" >
+         
+            <h2>Our Technology</h2>
+             <div class="col-md-12">
           <div class="col-md-4"></div>
           <div class="col-md-4">
-            <h3>Our Technology</h3>
             <img src="images/Circle_Peelaway_image_medium.jpg">
           </div>
+          <div class="col-md-4"></div>
         </div>
-        <div class="col-md-12" style="background-color: #fff">
-          Peel Away Labs specializes in sheets. The company has applied a new technology to design a solution that benefits both the institution and the consumers.    
-
-Peelaways are an innovative way to manage the daily task of changing bedsheets.
-
- The multi-layered, peel-away, waterproof disposable sheet product allows quick removal of each layer, and a fresh, clean, soft sheet is immediately in place underneath.
+        <div class="col-md-12" >
+          Peel Away Labs specializes in sheets. The company has applied a new technology to design a solution that benefits both the institution and the consumers. 
+          Peelaways are an innovative way to manage the daily task of changing bedsheets.
+          The multi-layered, peel-away, waterproof disposable sheet product allows quick removal of each layer, and a fresh, clean, soft sheet is immediately in place underneath.
         </div>
-        <div class="col-md-12" style="background-color: #fff">
+        <div class="col-md-12" >
           <div class="col-md-3"></div>
         <div class="col-md-6">
           <img src="images/Screenshot.png">
@@ -104,105 +141,108 @@ Peelaways are an innovative way to manage the daily task of changing bedsheets.
         <div class="col-md-3"></div>
         <div class="col-md-12">
         <p>Peelaways are independently laboratory tested and are free from phthalates, formaldehyde, and lead.
-
-Peelaways are infection neutral and do not transmit infectious material between layers
-
-The micropore waterproof membrane for breathability keeps the patient cool while protecting the mattress.  It's soft and absorbent nonwoven fibers are 32% softer and generate less friction than traditional bed sheets.</p>   
+        Peelaways are infection neutral and do not transmit infectious material between layers .The micropore waterproof membrane for breathability keeps the patient cool while protecting the mattress.  It's soft and absorbent nonwoven fibers are 32% softer and generate less friction than traditional bed sheets.</p>   
+        </div>
+       </div>
+     </div>
+       <div class="article customArticleCss" style="height: 380px;">
+        <h2 style="padding-left: 2%;"><span>Disposable Multi-Layered Bed Sheets.</span></h2>
+        <p>
+          <div class="clr"></div>
+          <div style="padding-left: 3%;">
+            <div class="col-md-4">
+                <img src="images/Corner_Peel_Away.jpg" style="    border-radius: 127px;width: 265px;">
+            </div>
+            <div class="col-md-8">
+              <span>Always sleep on a clean and comfortable sheet. The special blend of Viscose and Polyester fibers is combined with a breathable waterproof membrane that allows you to be cooler while sleeping.</span></br>
+           <span> No more hassle of laundry. No more wrestling with the corners to change the bed. Get right back to sleep. Easy to use – provides protection against leaks, messes, spills and dirt.</span></br>
+           <span> Perfect for elderly, camps, dorm rooms, temporary housing, guest rooms – anywhere!
+           We have reach an agreement with a American company (Peel Away Labs, Inc.) which manufactures high quality disposable bedsheets at affordable prices.</span>
+            </div>
+        </div>
+        </p>
+      </div>
+      <!--  <div class="article" style="height: 280px;">
+        <h2 style="padding-left: 2%;"><span>Product Pricing</span></h2>
+        <p>
+          <div class="clr"></div>
+          <div style="padding-left: 3%;">
+          
+        <div class="col-md-9">
+          <h3>The Retail Market Price Globally. 
+(Delivery & Custom Duty Excluded)</h3>
+<ul>
+  <li>1 Layered : $ 15(Rs.1095)</li>
+  <li>3 Layered : $ 21(Rs.1533)</li>
+  <li>5 Layered : $ 23(Rs.1679)</li>
+</ul>
+        </div>
+        <div class="col-md-3">
+            <img src="images/Corner_Peel_Away.jpg" style="    border-radius: 127px;width: 140px;">
         </div>
        
+           
+          </div>  
+        </p>
+      </div> -->
+       <div class="article customArticleCss" id="ProductObjective"  style="height: 280px;">
+        <h2 style="padding-left: 2%;"><span>Current Clients Across World</span></h2>
+        <p>
+          <div class="clr"></div>
+          <div style="padding-left: 3%;margin-left:15px;">
+           <span> These Sheets is being used at Several Parts across the world.South Africa,Mexico, USA, Singapore.</span>
+        <div>
+          <h3> <b>Listing Few Clients</b></h3>
+          <ul>
+            <li>NetCare Hospitals in South Africa.</li>
+            <li>Gruppo Angeles Hospitals in Mexico.</li>
+            <li>In the US, University of Texas South-western Hospital.</li>
+            <li>Mount Elizabeth Hospital in Singapore.</li>
+
+          </ul>
         </div>
-        
+           
+          </div>  
+        </p>
       </div>
-     
-        <!--   <div class="col-md-12" style="padding: 2%;margin-top: 2%; background-color: #fff">
-            <div class="col-md-6">
-              <img style="width: 460px;" src="images/maxwell-bio.jpg">
-            </div>
-            <div class="col-md-6">
-              <h2>Maxwell Cohen</h2>
-              <p>
-is the founder and CEO of Peel Away Labs, the innovative start-up company that developed Peelaways, the bedding industry’s first multilayered, disposable, waterproof fitted sheet designed for the home, industrial and healthcare markets. While attending the University of Arizona, Cohen observed students were not changing their bed sheets because stripping the bed, doing the laundry and remaking the bed were such a hassle. He also noticed his grandparents were struggling to change their own fitted sheet. Realizing this was a challenge for multiple life stages including parents of toddlers, Cohen knew there had to be a better way. As a result, he created the patented solution, Peelaways, enabling consumers or health professionals to simply peel away the top layer to reveal a clean sheet below in seconds. Today, Cohen has secured major retailers and distributors worldwide, including consumer retailers Walmart, Amazon, BedBathandBeyond.com, BuybuyBaby.com, and Zulily, and hospital distributors Cardinal Health and McKesson. Cohen has also appeared on ABC’s Shark Tank in 2015. Peelaways are now being distributed internationally to address issues such as the water shortage in South Africa. Cohen studied Environmental and Water Resource Economics at the University of Arizona, where he graduated in 2013.</p>
-            </div>
-          </div> -->
-     
-      
-      <div class="article">
-        <div class="_DblQBlAM__container" style="max-width: 1170px;">
-          <div class="_pDNE0kYl _O03RhyXn pb-grid pb-grid--doubling pb-grid--stackable pb-grid--three-columns pb-grid--equal-height pb-tablet--hidden pb-mobile--hidden" data-id="_O03RhyXn">
-            <div class="col-md-4 " style="padding: 39px;">
-              <div class="_O689JW7n _3V__uyxV" data-id="_3V__uyxV">
-                <a class="_epNwrNGv _zXQqI0zj" href="https://www.amazon.com/dp/B078HK764Y?m=A1NUMXB6RMT1S&amp;ref_=v_sp_widget_detail_page&amp;th=1" target="_blank" data-id="_zXQqI0zj">
-                  <picture>
-                    <img src="https://cdn.shopify.com/s/files/1/0001/9591/9916/files/amazon.jpg?1589610125018121717" style="width: 230px;"></picture>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-4 " style="padding: 39px;">
-                <div class="_O689JW7n _Ap2JuPQV" data-id="_Ap2JuPQV"><a class="_epNwrNGv _RWg1IdnZ" href="https://www.buybuybaby.com/store/product/camp-a-peel-multi-layered-disposable-bed-sheets/3330182?Keyword=peel%20away%20labs" target="_blank" data-id="_RWg1IdnZ">
-                  <picture>
-                    <img src="https://cdn.shopify.com/s/files/1/0001/9591/9916/files/buy-buy-baby.jpg?1589610125018121717" style="width: 230px;">
-                  </picture>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-4 " style="padding: 39px;">
-              <div class="_O689JW7n _m0WquvbV" data-id="_m0WquvbV">
-                <a class="_epNwrNGv _qXrPI0n5" href="https://www.bedbathandbeyond.com/store/product/peelaways-multi-layered-disposable-bed-sheets/3330381?Keyword=peel%20away%20labs" target="_blank" data-id="_qXrPI0n5">
-                  <picture>
-                    <img src="https://cdn.shopify.com/s/files/1/0001/9591/9916/files/bed-bath-beyond.jpg?1589610125018121717" style="width: 230px;">
-                  </picture>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="_pDNE0kYl _Y5NMh198 pb-grid pb-grid--doubling pb-grid--stackable pb-grid--three-columns pb-grid--equal-height pb-large--hidden pb-desk--hidden" data-id="_Y5NMh198">
-            
-              <div class="col-md-4 " style="padding: 39px;">
-                <div class="_O689JW7n _lV9Nuz8p" data-id="_lV9Nuz8p">
-                  <a class="_epNwrNGv _MWPGIzkZ" href="https://www.buybuybaby.com/store/product/camp-a-peel-multi-layered-disposable-bed-sheets/3330182?Keyword=peel%20away%20labs" target="_blank" data-id="_MWPGIzkZ">
-                    <picture>
-                      <img src="https://cdn.shopify.com/s/files/1/0001/9591/9916/files/buy-buy-baby.jpg?1589610125018121717" style="width: 230px;">
-                    </picture>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-4 " style="padding: 39px;">
-                <div class="_O689JW7n _NjR5uO9r" data-id="_NjR5uO9r">
-                  <a class="_epNwrNGv _QW8aIQMZ" href="https://www.bedbathandbeyond.com/store/product/peelaways-multi-layered-disposable-bed-sheets/3330381?Keyword=peel%20away%20labs" target="_blank" data-id="_QW8aIQMZ">
-                    <picture>
-                      <img src="https://cdn.shopify.com/s/files/1/0001/9591/9916/files/bed-bath-beyond.jpg?1589610125018121717" style="width: 230px;">
-                    </picture>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-4 " style="padding: 39px;">
-                <div class="_O689JW7n _ZjK3ukXr" data-id="_ZjK3ukXr">
-                  <a class="_epNwrNGv _957vIpyZ" href="https://www.rehabmart.com/product/peelaway-disposable-bed-sheets-46280.html" target="_blank" data-id="_957vIpyZ">
-                    <picture>
-                      <img src="https://cdn.shopify.com/s/files/1/0001/9591/9916/files/rehab-mart.jpg?1589610125018121717" style="width: 230px;">
-                    </picture>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="_pDNE0kYl _XnKQhJ28 pb-grid pb-grid--doubling pb-grid--stackable pb-grid--three-columns pb-grid--equal-height  slideInUp" data-id="_XnKQhJ28" data-animation="slideInUp" style="visibility: visible;">
-              <div class="col-md-4 " style="padding: 39px;">
-                <div class="_O689JW7n _2VXWugP0" data-id="_2VXWugP0">
-                  <a class="_epNwrNGv _oXDzI0EZ" href="https://www.raneystruckparts.com/peel-away-trucker-disposable-fitted-bed-sheets/" target="_blank" data-id="_oXDzI0EZ">
-                    <picture>
-                      <img src="https://cdn.shopify.com/s/files/1/0001/9591/9916/files/raneys.jpg?1589610125018121717" style="width: 230px;"></picture>
-                    </a>
-                  </div>
-                </div>
-             
-               
-            </div>
-          </div>
-      </div>
-      <div class="clr"></div>
     </div>
   </div>
       </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+window.onload = function(e){ 
+     // var Visitor = document.getElementById('#ProductVisitor');
+     var visitorData=$("#ProductVisitor").val('1'); 
+     $.ajax({
 
+         type: "GET",
+         url: "/SaveVisitor",
+         data: visitorData,
+          success: function(msg){
+            alert(msg);
+
+         }
+       });
+
+     
+    };
+  });
+
+</script>
+<script type="text/javascript">
+  var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
  
  @endsection

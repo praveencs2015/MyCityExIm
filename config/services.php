@@ -14,6 +14,15 @@ return [
     |
     */
 
+    // 'paytm-wallet' => [
+    //     'env' => 'local', // values : (local | production)
+    //     'merchant_id' => env('YOUR_MERCHANT_ID'),
+    //     'merchant_key' => env('YOUR_MERCHANT_KEY'),
+    //     'merchant_website' => env('YOUR_WEBSITE'),
+    //     'channel' => env('YOUR_CHANNEL'),
+    //     'industry_type' => env('YOUR_INDUSTRY_TYPE'),
+    // ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
@@ -34,5 +43,11 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+
+    'nexmo' => [
+    'key' => env('NEXMO_KEY'),
+    'secret' => env('NEXMO_SECRET'),
+    'sms_from' => '7065173740',
+],
 
 ];
