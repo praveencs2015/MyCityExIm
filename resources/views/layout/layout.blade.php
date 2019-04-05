@@ -35,7 +35,7 @@ $countCart=count($cartItem);
        <div class="logo">
         <h1 style="margin:0px;"><a href="/"><img src="/images/Completelogo.jpeg"  style="margin-top: -50px; margin-left: -45px;height:130px;width: 221px;" width="75" height="75" alt="" class="gal" /></a></h1>
       </div>      
-      <div class="col-md-9 RoundSocialIcon RoundIconResponsive" style="float: right;     width: 963px;      right: -104px;">
+      <div class="col-md-9 RoundSocialIcon RoundIconResponsive" style="float: right;     width: 963px;sright: -104px;">
           <div class="col-md-4" style="float: left">
               <a target="_blank" href="">
                <i class="fa fa-facebook icon imgsize "></i>
